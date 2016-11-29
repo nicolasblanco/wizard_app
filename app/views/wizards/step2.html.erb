@@ -1,0 +1,16 @@
+<ol class="breadcrumb">
+  <li><%= link_to "Step 1", step1_wizard_path %></li>
+  <li class="active">Step 2</li>
+  <li>Step 3</li>
+  <li>Step 4</li>
+</ol>
+
+<%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+  <%= f.error_notification %>
+
+  <%= hidden_field_tag :current_step, 'step2' %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+
+  <%= f.submit 'Continue' %>
+<% end %>

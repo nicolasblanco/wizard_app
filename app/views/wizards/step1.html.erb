@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+  <li class='active'>Step 1</li>
+  <li>Step 2</li>
+  <li>Step 3</li>
+  <li>Step 4</li>
+</ol>
+
+<%= simple_form_for @user_wizard, as: :user_wizard, url: validate_step_wizard_path do |f| %>
+  <%= f.error_notification %>
+
+  <%= hidden_field_tag :current_step, 'step1' %>
+  <%= f.input :email %>
+
+  <%= f.submit 'Continue' %>
+<% end %>

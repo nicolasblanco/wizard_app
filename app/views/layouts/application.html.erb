@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WizardApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <% if flash[:alert] %><div class="alert alert-danger"><%= flash[:alert] %></div><% end %>
+      <% if flash[:notice] %><div class="alert alert-success"><%= flash[:notice] %></div><% end %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
