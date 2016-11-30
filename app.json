@@ -1,0 +1,6 @@
+{
+  "name": "Rails Wizard App Sample",
+  "description": "An example of a static wizard using Rails 5",
+  "repository": "https://github.com/nicolasblanco/wizard_app",
+  "keywords": ["ruby", "rails"]
+}
